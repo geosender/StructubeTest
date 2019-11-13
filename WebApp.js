@@ -20,7 +20,6 @@ const multerConfig = {
 
         filename: function(req, file, next) {
             console.log(file);
-            //get the file mimetype ie 'image/jpeg' split and prefer the second value ie'jpeg'
             const ext = file.mimetype.split('/')[1];
             next(null, file.fieldname + '-' + Date.now() + '.' + ext);
         }
@@ -57,7 +56,7 @@ app.post('/upload', multer(multerConfig).single('photo'), function(req, res) {
 
 );
 
-// Local server connection
+// Local server connection output
 app.listen(port, function() {
     console.log(`Server listening on port ${port}`);
 });
