@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Structube Test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles/style.css">
+
+</head>
+
+<body>
+    <div class="form">
+        <form action="/upload" enctype="multipart/form-data" method="POST">
+            <!-- message for file types-->
+            <div class="section">Only image files work.</div>
+            <div class="inner-wrap">
+                <!-- file inputer -->
+                <label><input type="file" id="photo" name="photo" /></label>
+                <!-- button -->
+                <div class="button">
+                    <input type="submit" name="Upload" value="Upload Picture" />
+                </div>
+            </div>
+    </div>
+    </form>
+    </div>
+</body>
+
+</html>
